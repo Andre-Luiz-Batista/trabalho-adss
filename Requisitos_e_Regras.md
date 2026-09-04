@@ -322,187 +322,512 @@ RF-010
 
 # Requisitos Funcionais
 
-## RF-001 — Avaliação entre Usuários
+## RF-001 — Solicitar transporte de pet para o veterinário
 
-**Título:**  
-Avaliação entre usuários
+**Título:**
+Solicitação de transporte de pet.
 
-**Descrição:**  
-O sistema deve permitir que usuários que tiveram contato entre si avaliem uns aos outros naquele determinado serviço
+**Descrição:**
+O sistema deve permitir que o dono de pet solicite o transporte de seu animal até uma clínica veterinária, informando origem, destino e horário desejado.
 
-**Objetivo:**  
-Manter a qualidade dos serviços prestados e evitar inconveniências entre usuários
+**Objetivo:**
+Resolver a falta de disponibilidade do dono de pet para locomoção até o veterinário.
 
-**Stakeholders:**  
-Todos os atores
+**Stakeholders:**
+Dono de pet, transportador parceiro.
 
-**Ator principal:**  
-Cliente
+**Ator principal:**
+Dono de pet.
 
-**Pré-condições:**  
-- Usuários cadastrados
-- Usuários tiveram contato através da contratação e prestação de um serviço
-- Serviço marcado como concluído
+**Pré-condições:**
+- Usuário cadastrado e ativo.
+- Endereço de origem e destino informados.
 
-**Entradas:**  
-- Identificadores dos usuários
-- Identificador do serviço
-- Nota dentro de uma escala
+**Entradas:**
+Endereço de origem, endereço de destino, horário desejado, dados do pet.
 
-**Processamento esperado:**  
-Registrar a avaliação do serviço e dos usuários avaliados e atualizar a média de avaliação dos afetados.
+**Processamento esperado:**
+O sistema deve buscar transportadores parceiros com disponibilidade e cobertura para a rota e horário solicitados, exibindo opções ao cliente.
 
-**Saídas/Resultados:**  
-Avaliação salva e refletida no perfil do usuário
+**Saídas/Resultados:**
+Lista de transportadores disponíveis com valor estimado do serviço.
 
-**Pós-condições:**  
-Serviço marcado como plenamente encerrado
+**Pós-condições:**
+Solicitação registrada, aguardando confirmação do cliente e aceite do transportador.
 
-**Fluxos alternativos/exceções:**  
-- Prazo de avaliação expirar antes de ação por parte do usuário
-- Avaliações ruins podem ser acrescidas de comentários e/ou denúncias
+**Fluxos alternativos/exceções:**
+- Nenhum transportador disponível na região/horário.
+- Cliente cancela a solicitação antes da confirmação.
 
-**Regras de negócio relacionadas:**  
-RN-XXX
+**Regras de negócio relacionadas:**
 
-**Prioridade:**  
-Média 
 
-**Status:**  
+**Prioridade:**
+Crítica
+
+**Status:**
 Aprovado
 
-**Critérios de aceite:**  
-- A avaliação só pode ser feita por usuários relacionados num serviço e após a conclusão dele
-- A média de avaliações deve ser recalculada automaticamente.
+**Critérios de aceite:**
+- Exibir apenas transportadores com disponibilidade e cobertura compatíveis.
+- Exibir valor estimado antes da confirmação.
+- Permitir cancelamento antes do aceite do transportador.
 
-**Casos de uso relacionados:**  
-UC-XXX
+**Casos de uso relacionados:**
 
-**Tarefas relacionadas:**  
-TASK-XXX
+**Tarefas relacionadas:**
 
-**Casos de teste relacionados:**  
-CT-XXX
+**Casos de teste relacionados:**
 
-## RF-002 — Cadastro de produtos e serviços
+---
 
-**Título:**  
-Cadastro de produtos e serviços
+## RF-002 — Comprar e receber produtos pet
 
-**Descrição:**  
-O sistema deve permitir que clínicas veterinárias e petshops cadastrem e ofertem seus produtos e serviços
+**Título:**
+Compra e entrega de produtos pet.
 
-**Objetivo:**  
-Viabilização de vendas virtualmente
+**Descrição:**
+O sistema deve permitir que o dono de pet compre produtos disponíveis na estante virtual de um petshop parceiro e solicite a entrega em seu endereço.
 
-**Stakeholders:**  
-Petshops, clínicas veterinárias
+**Objetivo:**
+Permitir a compra de acessórios, brinquedos e alimentação sem necessidade de deslocamento do cliente.
 
-**Ator principal:**  
-Petshops/Clínicias veterinárias
+**Stakeholders:**
+Dono de pet, petshop, motorista de entrega.
 
-**Pré-condições:**  
-Conta de parceiro aprovada
+**Ator principal:**
+Dono de pet.
 
-**Entradas:**  
-Nome, descrição, preço, quantidade(para os produtos), disponibilidade (para os serviços)
+**Pré-condições:**
+- Produto disponível em estoque.
+- Endereço de entrega cadastrado.
 
-**Processamento esperado:**  
-Validar dados inseridos e vincular o produto/serviço ao parceiro
+**Entradas:**
+Produtos selecionados, quantidade, endereço de entrega, forma de pagamento.
 
-**Saídas/Resultados:**  
-Produtos/serviços ficam disponíveis para consulta pelos clientes 
+**Processamento esperado:**
+O sistema deve confirmar o pedido junto ao petshop, processar o pagamento e buscar um motorista de entrega disponível na região.
 
-**Pós-condições:**  
-Items aparecem no perfil do parceiro, nas buscas e sugestões
+**Saídas/Resultados:**
+Pedido confirmado, motorista designado, previsão de entrega informada.
 
-**Fluxos alternativos/exceções:**  
-Dados obrigatórios faltando
-Dados inválidos
+**Pós-condições:**
+Estoque do produto atualizado; pedido em andamento até confirmação de entrega.
 
-**Regras de negócio relacionadas:**  
-RN-XXX
+**Fluxos alternativos/exceções:**
+- Produto fica indisponível entre a seleção e a confirmação.
+- Nenhum motorista disponível na região.
 
-**Prioridade:**  
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
 Alta
 
-**Status:**  
+**Status:**
 Aprovado
 
-**Critérios de aceite:**  
-- ...
-- ...
-- ...
+**Critérios de aceite:**
+- Impedir finalização de compra de produto sem estoque.
+- Atualizar estoque somente após confirmação do pagamento.
+- Notificar cliente sobre status do pedido.
 
-**Casos de uso relacionados:**  
-UC-XXX
+**Casos de uso relacionados:**
 
-**Tarefas relacionadas:**  
-TASK-XXX
+**Tarefas relacionadas:**
 
-**Casos de teste relacionados:**  
-CT-XXX
+**Casos de teste relacionados:**
 
-## RF-003 — Cadastro de disponibilidade de cuidador
+---
 
-**Título:**  
-Cadastro de disponibilidade de cuidador
+## RF-003 — Agendar atendimento em clínica veterinária parceira
 
-**Descrição:**  
-O sistema deve permitir que cuidadores cadastrem as datas e horários que tem disponíveis juntamente do tipo de serviço(cuidar, passear, etc)
+**Título:**
+Agendamento de consulta, tosa ou atendimento.
 
-**Objetivo:**  
-Expor os serviços de um cuidador para clientes interessados
+**Descrição:**
+O sistema deve permitir que o dono de pet visualize horários disponíveis de uma clínica parceira e agende um atendimento.
 
-**Stakeholders:**  
-Cuidadores, donos de pet
+**Objetivo:**
+Viabilizar a venda de serviços das clínicas parceiras através do app.
 
-**Ator principal:**  
-Cuidadores
+**Stakeholders:**
+Dono de pet, clínica veterinária.
 
-**Pré-condições:**  
-Conta de cuidador parceiro aprovada
+**Ator principal:**
+Dono de pet.
 
-**Entradas:**  
-Dados necessários.
+**Pré-condições:**
+- Clínica com agenda ativa e horários liberados.
+- Usuário cadastrado.
 
-**Processamento esperado:**  
-O que o sistema deve realizar?
+**Entradas:**
+Clínica selecionada, tipo de atendimento, horário desejado, dados do pet.
 
-**Saídas/Resultados:**  
-Qual resultado deve ser produzido?
+**Processamento esperado:**
+O sistema deve verificar a disponibilidade do horário na agenda da clínica e reservá-lo mediante confirmação de pagamento.
 
-**Pós-condições:**  
-Qual deve ser o estado do sistema após a execução?
+**Saídas/Resultados:**
+Agendamento confirmado e refletido na agenda da clínica.
 
-**Fluxos alternativos/exceções:**  
-Quais comportamentos diferentes podem ocorrer?
+**Pós-condições:**
+Horário reservado torna-se indisponível para outros clientes.
 
-**Regras de negócio relacionadas:**  
-RN-XXX
+**Fluxos alternativos/exceções:**
+- Horário torna-se indisponível durante a reserva.
+- Clínica cancela o horário emergencialmente.
 
-**Prioridade:**  
-Crítica | Alta | Média | Baixa
+**Regras de negócio relacionadas:**
 
-**Status:**  
-Proposto | Em análise | Aprovado | Em desenvolvimento | Implementado | Validado
+**Prioridade:**
+Alta
 
-**Critérios de aceite:**  
-- ...
-- ...
-- ...
+**Status:**
+Aprovado
 
-**Casos de uso relacionados:**  
-UC-XXX
+**Critérios de aceite:**
+- Impedir dupla reserva do mesmo horário.
+- Notificar cliente e clínica após confirmação.
+- Permitir que a clínica cancele com notificação automática ao cliente.
 
-**Tarefas relacionadas:**  
-TASK-XXX
+**Casos de uso relacionados:**
 
-**Casos de teste relacionados:**  
-CT-XXX
+**Tarefas relacionadas:**
 
+**Casos de teste relacionados:**
 
+---
 
+## RF-004 — Gerenciar estante virtual de produtos
+
+**Título:**
+Gestão do catálogo de produtos do petshop.
+
+**Descrição:**
+O sistema deve permitir que o petshop parceiro cadastre, edite, remova e controle o estoque dos produtos exibidos em sua estante virtual.
+
+**Objetivo:**
+Viabilizar a venda dos produtos do petshop no meio virtual.
+
+**Stakeholders:**
+Petshop.
+
+**Ator principal:**
+Petshop parceiro.
+
+**Pré-condições:**
+Perfil de petshop aprovado e ativo.
+
+**Entradas:**
+Nome do produto, categoria, descrição, preço, quantidade em estoque, imagens.
+
+**Processamento esperado:**
+O sistema deve validar os dados do produto e atualizar o catálogo exibido aos clientes em tempo real.
+
+**Saídas/Resultados:**
+Produto disponível na estante virtual do petshop.
+
+**Pós-condições:**
+Catálogo do petshop atualizado.
+
+**Fluxos alternativos/exceções:**
+- Produto com estoque zerado é automaticamente ocultado da compra.
+- Petshop tenta cadastrar produto com dados incompletos.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Alta
+
+**Status:**
+Aprovado
+
+**Critérios de aceite:**
+- Impedir publicação de produto sem preço ou sem estoque informado.
+- Refletir alterações de estoque em tempo real na vitrine.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
+
+---
+
+## RF-005 — Cadastrar disponibilidade de cuidador
+
+**Título:**
+Cadastro de disponibilidade do cuidador parceiro.
+
+**Descrição:**
+O sistema deve permitir que o cuidador parceiro informe dias, horários, locais de atendimento e observações sobre os cuidados que presta.
+
+**Objetivo:**
+Permitir que o cuidador se ofereça como prestador de serviço pelo app.
+
+**Stakeholders:**
+Cuidador.
+
+**Ator principal:**
+Cuidador parceiro.
+
+**Pré-condições:**
+Perfil de cuidador aprovado.
+
+**Entradas:**
+Dias e horários disponíveis, região de atendimento, tipos de cuidado oferecidos, observações.
+
+**Processamento esperado:**
+O sistema deve armazenar a disponibilidade e utilizá-la na busca por cuidadores para novas solicitações.
+
+**Saídas/Resultados:**
+Agenda de disponibilidade do cuidador atualizada e visível para clientes na busca.
+
+**Pós-condições:**
+Cuidador passa a ser elegível para solicitações compatíveis.
+
+**Fluxos alternativos/exceções:**
+Cuidador remove disponibilidade previamente cadastrada.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Alta
+
+**Status:**
+Aprovado
+
+**Critérios de aceite:**
+- Não listar cuidador fora dos dias/horários declarados.
+- Permitir edição e remoção da disponibilidade a qualquer momento.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
+
+---
+
+## RF-006 — Contratar transporte vinculado a atendimento de cuidador
+
+**Título:**
+Contratação de transporte para cuidador em atendimento externo.
+
+**Descrição:**
+O sistema deve permitir que, ao confirmar um atendimento de cuidado em local distante de sua residência, o cuidador contrate um transportador ou motorista parceiro para o deslocamento no horário do serviço.
+
+**Objetivo:**
+Viabilizar o deslocamento do cuidador até locais de atendimento distantes.
+
+**Stakeholders:**
+Cuidador, transportador/motorista parceiro, dono de pet.
+
+**Ator principal:**
+Cuidador parceiro.
+
+**Pré-condições:**
+- Agendamento de cuidado confirmado.
+- Distância entre residência do cuidador e local do atendimento calculada.
+
+**Entradas:**
+Endereço de origem, endereço de destino, horário do serviço.
+
+**Processamento esperado:**
+O sistema deve oferecer a contratação de transporte antes de confirmar o agendamento de cuidado.
+
+**Saídas/Resultados:**
+Transporte reservado e vinculado ao horário do atendimento de cuidado.
+
+**Pós-condições:**
+Agendamento de cuidado só é confirmado após a garantia do deslocamento.
+
+**Fluxos alternativos/exceções:**
+- Cuidador informa transporte próprio.
+- Nenhum transportador disponível para o horário necessário.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Alta
+
+**Status:**
+Proposto
+
+**Critérios de aceite:**
+- Calcular corretamente a distância entre residência do cuidador e local do atendimento.
+- Impedir confirmação do atendimento sem transporte garantido, quando aplicável.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
+
+---
+
+## RF-007 — Cadastrar disponibilidade de transportador/motorista
+
+**Título:**
+Cadastro de disponibilidade de transportadores e motoristas parceiros.
+
+**Descrição:**
+O sistema deve permitir que transportadores parceiros e motoristas parceiros informem horários, datas e região de cobertura em que estão disponíveis para atender solicitações.
+
+**Objetivo:**
+Permitir que motoristas com espaço no veículo se ofereçam como prestadores de transporte ou entrega.
+
+**Stakeholders:**
+Transportador, motorista de entrega.
+
+**Ator principal:**
+Transportador/motorista parceiro.
+
+**Pré-condições:**
+Perfil aprovado com documentação e veículo validados.
+
+**Entradas:**
+Dias e horários disponíveis, região de cobertura, tipo de serviço oferecido.
+
+**Processamento esperado:**
+O sistema deve armazenar a disponibilidade declarada e utilizá-la na busca de prestadores para novas solicitações de transporte ou entrega.
+
+**Saídas/Resultados:**
+Prestador elegível para receber solicitações compatíveis com sua disponibilidade e cobertura.
+
+**Pós-condições:**
+—
+
+**Fluxos alternativos/exceções:**
+Prestador altera ou remove disponibilidade previamente cadastrada.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Alta
+
+**Status:**
+Aprovado
+
+**Critérios de aceite:**
+- Não oferecer solicitações fora da cobertura declarada.
+- Permitir edição da disponibilidade a qualquer momento.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
+
+---
+
+## RF-008 — Aceitar/recusar solicitação de serviço
+
+**Título:**
+Aceite de solicitação por prestador.
+
+**Descrição:**
+O sistema deve permitir que o prestador aceite ou recuse uma solicitação de serviço recebida
+
+**Objetivo:**
+Formalizar o compromisso entre cliente e prestador para execução do serviço.
+
+**Stakeholders:**
+Dono de pet, cuidador, transportador, motorista de entrega, clínica.
+
+**Ator principal:**
+Prestador de serviço.
+
+**Pré-condições:**
+Solicitação pendente de aceite dentro da disponibilidade do prestador.
+
+**Entradas:**
+Decisão do prestador.
+
+**Processamento esperado:**
+O sistema deve validar se o horário da solicitação conflita com outro compromisso já confirmado do prestador antes de permitir o aceite.
+
+**Saídas/Resultados:**
+Serviço confirmado ou liberado para outro prestador.
+
+**Pós-condições:**
+Compromisso adicionado à agenda do prestador, em caso de aceite.
+
+**Fluxos alternativos/exceções:**
+- Prestador tenta aceitar solicitação com conflito de horário.
+- Solicitação expira sem resposta do prestador.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Crítica
+
+**Status:**
+Aprovado
+
+**Critérios de aceite:**
+- Bloquear aceite de solicitações com conflito de horário.
+- Notificar o cliente imediatamente após o aceite ou recusa.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
+
+---
+
+## RF-009 — Avaliar serviço prestado
+
+**Título:**
+Avaliação do entre usuários após a conclusão do serviço.
+
+**Descrição:**
+O sistema deve permitir que os usuários se avaliem entre si ao final de cada serviço concluído.
+
+**Objetivo:**
+Manter a qualidade e a confiança na rede de prestadores parceiros.
+
+**Stakeholders:**
+Dono de pet, clínica, petshop, cuidador, transportador, motorista de entrega.
+
+**Ator principal:**
+Dono de pet.
+
+**Pré-condições:**
+Serviço marcado como concluído.
+
+**Entradas:**
+Nota, comentário.
+
+**Processamento esperado:**
+O sistema deve registrar a avaliação e recalcular a reputação média dos usuários.
+
+**Saídas/Resultados:**
+Reputação dos usuários atualizada.
+
+**Pós-condições:**
+Avaliação disponível no histórico.
+
+**Fluxos alternativos/exceções:**
+Cliente opta por não avaliar dentro do prazo definido.
+
+**Regras de negócio relacionadas:**
+
+**Prioridade:**
+Média
+
+**Status:**
+Proposto
+
+**Critérios de aceite:**
+- Disponibilizar avaliação apenas para serviços concluídos.
+- Atualizar a reputação do prestador imediatamente após o envio da avaliação.
+
+**Casos de uso relacionados:**
+
+**Tarefas relacionadas:**
+
+**Casos de teste relacionados:**
 
 # Requisitos Não Funcionais
 

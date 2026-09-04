@@ -373,35 +373,6 @@ RF-004, RF-009
 **Casos de teste relacionados:**
 CT-XXX
 
-## RNF-001 — Processamento de Serviços
-
-**Categoria:**  
-Desempenho
-
-**Descrição:**  
-O sistema deve permitir um cadastro de consulta
-
-**Justificativa:**  
-Por que este requisito é necessário?
-
-**Métrica/Critério mensurável:**  
-Como será verificado?
-
-**Escopo:**  
-Todo o sistema ou funcionalidades específicas?
-
-**Prioridade:**  
-Crítica | Alta | Média | Baixa
-
-**Status:**  
-Proposto | Em análise | Aprovado | Implementado | Validado
-
-**Requisitos relacionados:**  
-RF-XXX
-
-**Casos de teste relacionados:**  
-CT-XXX
-
 ---
 
 ## RNF-XXX — Nome do Requisito

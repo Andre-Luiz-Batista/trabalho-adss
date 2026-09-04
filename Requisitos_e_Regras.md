@@ -779,7 +779,7 @@ Aprovado
 ## RF-009 — Avaliar serviço prestado
 
 **Título:**
-Avaliação do entre usuários após a conclusão do serviço.
+Avaliação entre usuários após a conclusão do serviço.
 
 **Descrição:**
 O sistema deve permitir que os usuários se avaliem entre si ao final de cada serviço concluído.
@@ -858,7 +858,7 @@ Aprovado
 RF-002, RF-006, RF-008
 
 **Casos de teste relacionados:**
-CT-XXX
+
 
 ---
 
@@ -1014,64 +1014,32 @@ Aprovado
 RF-004, RF-009
 
 **Casos de teste relacionados:**
-CT-XXX
-
-## RNF-001 — Processamento de Serviços
-
-**Categoria:**  
-Desempenho
-
-**Descrição:**  
-O sistema deve permitir um cadastro de consulta
-
-**Justificativa:**  
-Por que este requisito é necessário?
-
-**Métrica/Critério mensurável:**  
-Como será verificado?
-
-**Escopo:**  
-Todo o sistema ou funcionalidades específicas?
-
-**Prioridade:**  
-Crítica | Alta | Média | Baixa
-
-**Status:**  
-Proposto | Em análise | Aprovado | Implementado | Validado
-
-**Requisitos relacionados:**  
-RF-XXX
-
-**Casos de teste relacionados:**  
-CT-XXX
 
 ---
 
-## RNF-XXX — Nome do Requisito
+## RNF-007 — Privacidade de conversas privadas
 
 **Categoria:**  
-Segurança | Desempenho | Usabilidade | ...
+Legal
 
 **Descrição:**  
-O sistema deve...
+O sistema deve manter privacidade para os conteúdos compartilhados e comunicados entre Donos de Pet, Cuidadores, Transportadores e Motoristas parceiros.
 
 **Justificativa:**  
-Por que este requisito é necessário?
+Para estar de acordo com a LGPD, garantindo segurança para os usuários.
 
 **Métrica/Critério mensurável:**  
-Como será verificado?
+Avaliação dos dados armazenados e seu englobamento nos requisitos da LGPD.
 
 **Escopo:**  
-Todo o sistema ou funcionalidades específicas?
+Conversas privadas entre os prestadores envolvidos.
 
-**Prioridade:**  
-Crítica | Alta | Média | Baixa
+**Prioridade:**
+Alta
 
-**Status:**  
-Proposto | Em análise | Aprovado | Implementado | Validado
+**Status:**
+Aprovado
 
 **Requisitos relacionados:**  
-RF-XXX
 
 **Casos de teste relacionados:**  
-CT-XXX

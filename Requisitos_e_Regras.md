@@ -281,13 +281,13 @@ RF-011
 
 ---
 
-## RN-008 — Avaliação obrigatória ao final do serviço
+## RN-008 — Avaliação do serviço
 
 **Título:**
 Usuários devem poder avaliar uns aos outros
 
 **Descrição:**
-Ao final de cada serviço executado, os usuários que interagiram entre si em um serviço devem avaliar uns aos outros.
+Ao final de cada serviço executado, os usuários que interagiram entre si em um serviço podem avaliar uns aos outros.
 
 **Origem:**
 Necessidade de garantir qualidade e confiança da plataforma.
@@ -302,6 +302,7 @@ Aplicada após a conclusão de um serviço.
 O sistema deve disponibilizar a opção de avaliação assim que o serviço for marcado como concluído, e os usuários devem ter sua reputação recalculada com base nas avaliações recebidas.
 
 **Exceções:**
+Nenhuma.
 
 **Dados envolvidos:**
 Nota, comentário, histórico de avaliações, média de reputação dos usuários.

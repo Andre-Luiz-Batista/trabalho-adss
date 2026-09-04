@@ -35,7 +35,6 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-001
 
 **Observações:**
 
@@ -114,7 +113,7 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-009
+RF-008
 
 **Observações:**
 —
@@ -154,7 +153,7 @@ Alta
 Aprovado
 
 **Requisitos relacionados:**
-RF-004
+RF-003
 
 **Observações:**
 —
@@ -194,7 +193,7 @@ Alta
 Aprovado
 
 **Requisitos relacionados:**
-RF-005
+RF-004
 
 **Observações:**
 —
@@ -234,7 +233,7 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-001
+RF-005, RF-007
 
 **Observações:**
 —
@@ -274,7 +273,6 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-011
 
 **Observações:**
 —
@@ -314,7 +312,7 @@ Média
 Proposto
 
 **Requisitos relacionados:**
-RF-010
+RF-009
 
 **Observações:**
 
@@ -855,10 +853,9 @@ Alta
 Aprovado
 
 **Requisitos relacionados:**
-RF-002, RF-006, RF-008
+RF-001, RF-009
 
 **Casos de teste relacionados:**
-
 
 ---
 
@@ -886,10 +883,8 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-011
 
 **Casos de teste relacionados:**
-CT-XXX
 
 ---
 
@@ -918,10 +913,9 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-002, RF-009, RF-011
+RF-001
 
 **Casos de teste relacionados:**
-CT-XXX
 
 ---
 
@@ -940,7 +934,7 @@ O público-alvo inclui donos de pets com rotina corrida, que precisam de um flux
 Teste de usabilidade com usuários reais medindo número de etapas e taxa de conclusão sem assistência.
 
 **Escopo:**
-Fluxo de solicitação de serviços (RF-002, RF-003, RF-004).
+Fluxo de solicitação de serviços (RF-001, RF-002, RF-003).
 
 **Prioridade:**
 Alta
@@ -949,10 +943,9 @@ Alta
 Aprovado
 
 **Requisitos relacionados:**
-RF-002, RF-003, RF-004
+RF-001, RF-002, RF-003
 
 **Casos de teste relacionados:**
-CT-XXX
 
 ---
 
@@ -980,10 +973,9 @@ Média
 Aprovado
 
 **Requisitos relacionados:**
-RF-002, RF-008
+RF-002, RF-007
 
 **Casos de teste relacionados:**
-CT-XXX
 
 ---
 
@@ -1002,7 +994,7 @@ Falhas de concorrência podem gerar dupla reserva do mesmo prestador, prejudican
 Zero ocorrências de dupla reserva em testes sobre o mesmo horário/prestador.
 
 **Escopo:**
-Aceite de solicitações (RF-009) e agendamentos em clínicas (RF-004).
+Aceite de solicitações (RF-008) e agendamentos em clínicas (RF-003).
 
 **Prioridade:**
 Crítica
@@ -1011,7 +1003,7 @@ Crítica
 Aprovado
 
 **Requisitos relacionados:**
-RF-004, RF-009
+RF-003, RF-008
 
 **Casos de teste relacionados:**
 
